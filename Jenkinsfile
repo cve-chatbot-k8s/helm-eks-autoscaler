@@ -25,7 +25,7 @@ pipeline {
                 }
             }
             steps {
-                sh 'helm lint .'
+                sh 'helm lint cluster-autoscaler'
             }
         }
         stage('Helm Template') {
@@ -35,7 +35,7 @@ pipeline {
                 }
             }
             steps {
-                sh 'helm template .'
+                sh 'helm template cluster-autoscaler'
             }
         }
     }
