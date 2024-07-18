@@ -8,7 +8,7 @@
     [
       "semantic-release-helm",
       {
-        "chartPath": "./",
+        "chartPath": "cluster-autoscaler/Chart.yaml",
         "onlyUpdateVersion": true
       }
     ],
