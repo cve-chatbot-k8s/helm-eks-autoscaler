@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/csye7125-su24-team7/helm-eks-autoscaler/compare/v1.0.0...v1.1.0) (2024-07-19)
+
+
+### Features
+
+* mirror autoscaler image in dockerhub ([eebdc3b](https://github.com/csye7125-su24-team7/helm-eks-autoscaler/commit/eebdc3b0320293d4862c0656b4f8ce2c78c9b35f))
+
 # 1.0.0 (2024-07-18)
 
 
