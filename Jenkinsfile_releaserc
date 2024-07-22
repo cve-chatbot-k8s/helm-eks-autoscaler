@@ -1,6 +1,10 @@
 pipeline {
   agent any
   tools { nodejs "node" }
+    environment {
+      DOCKER_IMAGE_NAME = 'girish332/cluster-autoscaler'
+      LATEST_TAG = 'latest'
+    }
   stages {
     stage ('Checkout Code') {
       steps {
@@ -23,6 +27,21 @@ pipeline {
             '''
         }
     }
+  }
+  stage('Build and Push Cluster Autoscaler Docker Image') {
+      steps {
+          script {
+              withDockerRegistry(credentialsId: 'dockerhub-creds') {
+                  sh '''
+                      docker buildx ls
+                      docker buildx create --name auto-scaler
+                      docker buildx use auto-scaler
+                      VERSION=$(git describe --tags --always)
+                      docker buildx build --push --platform linux/amd64,linux/arm64 --tag girish332/cluster-autoscaler:$VERSION --tag girish332/cluster-autoscaler:latest .
+                  '''
+              }
+          }
+      }
   }
   }
   post {
