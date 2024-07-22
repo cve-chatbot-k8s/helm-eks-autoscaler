@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/csye7125-su24-team7/helm-eks-autoscaler/compare/v1.1.0...v1.1.1) (2024-07-22)
+
+
+### Bug Fixes
+
+* fixed mirroring logic ([2c5b74e](https://github.com/csye7125-su24-team7/helm-eks-autoscaler/commit/2c5b74e926f1e6bd61e0116a6ad69e830bb32f2b))
+
 # [1.1.0](https://github.com/csye7125-su24-team7/helm-eks-autoscaler/compare/v1.0.0...v1.1.0) (2024-07-19)
 
 
